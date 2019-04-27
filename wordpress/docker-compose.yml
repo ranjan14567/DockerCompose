@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:
+        mysql: 
+            image: mariadb
+            ports: 
+              - "3306:3306"
+            volumes: 
+              - mysql_data:/var/lib/mysql 
+            environment: 
+              MYSQL_ROOT_PASSWORD: redhat
+        
+        wordpress:
+                image: wordpress
+                ports: 
+                  - "4000:80"
+                volumes: 
+                  - mywebsite_data:/var/www/html 
+                environment:
+                   WORDPRESS_DB_PASSWORD: redhat
+                
+                depends_on: 
+                        - mysql
+                links: 
+                  - mysql
+volumes: 
+    mysql_data:
+    mywebsite_data: 
+
