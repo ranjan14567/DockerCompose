@@ -1,0 +1,113 @@
+mkdir  /myproject 
+  157  cd /myproject
+  158  mkdir  haproxy 
+  159  cd haproxy/
+  160  vim  haproxy.cfg 
+  161  vim  Dockerfile
+  162  cd ../
+  163  vim  docker-compose.yml 
+  164  cat  haproxy/haproxy.cfg 
+  165  wq
+  166  docker-compose  config 
+  167  docker-compose up --build
+  168  docker-compose up --build -d
+  169  vim  haproxy/haproxy.cfg 
+  170  docker-compose up --build -d
+  171  vim  haproxy/haproxy.cfg 
+  172  vim  docker-compose.yml 
+  173  docker-compose up --build -d
+  174  vim  docker-compose.yml 
+  175* docker-compose service  
+  176  docker-compose up --build --no-cache -d 
+  177  docker-compose up --build -d 
+  178  docker-compose  ps 
+  179  vim  haproxy/haproxy.cfg 
+  180  docker-compose up --build -d 
+  181  docker ps
+  182  docker stop  28bf8f0e28f1
+  183  docker-compose  logs 67f85513cbf4
+  184  docker-compose  ps
+  185  docker-compose  logs haproxy
+  186  docker start  28bf8f0e28f1
+  187  docker-compose  logs haproxy
+  188  docker-compose  ps
+  189  cat  haproxy/haproxy.cfg 
+  190  vim    haproxy/haproxy.cfg 
+  191  docker-compose down 
+  192  docker-compose up --build -d 
+  193  docker-compose  ps
+  194  vim    haproxy/haproxy.cfg 
+  195  docker-compose up --build -d 
+  196  vim    haproxy/haproxy.cfg 
+  197  docker-compose up --build -d 
+  198  docker-compose  ps
+  199  vim    haproxy/haproxy.cfg 
+  200  docker-compose up --build -d 
+  201  docker-compose  ps
+  202  vim    haproxy/haproxy.cfg 
+  203  cd
+  204  mkdir  /asish_project
+  205  cd /asish_project
+  206  vim   requirements.txt
+  207  vim  app.py 
+  208  vim  Dockerfile 
+  209  vim  docker-compose.yml 
+  210  docker-compose  build --no-cache 
+  211  docker-compose up -d 
+  212  docker-compose ps
+  213  tput bold
+  214  docker-compose ps
+  215  curl --header "Content-Type: application/json" --request POST --data '{"name":"manoj"}' localhost:5000
+  216  curl --header "Content-Type: application/json" --request POST --data '{"name":"asish"}' localhost:5000
+  217  curl  localhost:5000
+  218  cat  docker-compose.yml 
+  219  cat  app.py 
+  220  ll /
+  221  docker-compose  build  
+  222  docker-compose  build --no-cache 
+  223  docker-compose up -d 
+  224  cat docker-compose.yml 
+  225  cd 
+  226  clear
+  227  ll
+  228  cd /myproject/
+  229  ll
+  230  cd ../asish_project/
+  231  ll
+  232  cd /
+  233  ll
+  234  git add asish_project myproject
+  235  yum install git -y
+  236  ll
+  237  cd asish_project/
+  238  ll
+  239  cd ..
+  240  ll
+  241  pwd
+  242  scp -r asish_project myproject wordpress root@foundation:/Desktop
+  243  scp -r asish_project myproject wordpress root@foundation:/
+  244  ll
+  245  tar docker.tar.gz asish_project myproject wordpress
+  246  tar -cvfz docker.tar.gz asish_project myproject wordpress
+  247  ll
+  248  git
+  249  cd
+  250  git clone https://github.com/binayakgithub/docker-27042019.git
+  251  ll
+  252  cd docker-27042019/
+  253  ll
+  254  cd ..
+  255  cd /
+  256  ll
+  257  cp -rf asish_project myproject wordpress /root/docker-27042019/
+  258  cd -
+  259  ll
+  260  cd docker-27042019/
+  261  ll
+  262  git add .
+  263  git config --global user.name "binayak"
+  264  git config --global user.email "binayak@gmail.com"
+  265  git commit -m "added dockere docs"
+  266  git push origin master
+  267  history
+[root@server3 docker-27042019]#
