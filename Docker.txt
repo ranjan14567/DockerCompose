@@ -1,0 +1,119 @@
+Docker is a container management service. 
+The keywords of Docker are develop, ship and run anywhere. 
+The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
+
+The initial release of Docker was in March 2013.
+it has become the buzzword for modern world development, especially in the face of Agile-based projects.
+
+++++++++++++++++++++++++++++++++++++
+
+Docker - Hub
+Docker Hub is a registry service on the cloud that allows you to download Docker images that are built by other communities. 
+You can also upload your own Docker built images to Docker hub. 
+We can download the Jenkins Docker image from Docker hub.
+
++++++++++++++++++++++++++++++++++++++
+
+Docker - Images
+In Docker, everything is based on Images. An image is a combination of a file system and parameters.
+
+$ docker run hello-world 
+
+$ sudo docker run -it centos /bin/bash
+
+sudo : it is a command to runs with root access
+run : it is a command used to mention to create an instance of an image, which is called container.
+-it : run in interactive mode
+/bin/bash : run the bash shell once CentOS is up and running
+centos : Name of the image we want to download from Docker Hub and install on your machine
+
+$ docker images   //Display all images currently installed on the system.
+
+Each Images have following attributes:
+REPOSITORY VIRTUAL SIZE: Size of the images
+TAG: Used to logically tag images
+IMAGE ID: Used to uniquely identify the image
+Created: The number of days since the image was created
+
+$ docker run <image_name>
+Images can be downloaded from Docker Hub using the Docker run command.
+Image − This is the name of the image which is used to run the container.
+
+Removing Docker Images:
+The Docker images on the system can be removed via the docker rmi command.
+$ docker rmi ImageID 
+
+$ sudo docker images -q 
+q − It tells the Docker command to return the Image ID’s only.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+docker inspect:
+This command is used see the details of an image or container.
+Syntax
+docker inspect <image_name> 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Docker - Containers:
+Containers are instances of Docker images that can be run using the Docker run command. 
+The basic purpose of Docker is to run containers.
+
+Running a Container:
+Running of containers is managed with the Docker run command. 
+To run a container in an interactive mode, first launch the Docker container.
+$ sudo docker run –it centos /bin/bash 
+
+Listing of Containers
+This command is used to return the currently running containers.
+$ docker ps
+
+$ docker ps -a 
+Options
+─a : It tells the docker ps command to list all of the containers on the system.
+
+docker history:
+you can see all the commands that were run with an image via a container.
+Syntax
+$ docker history ImageID 
+
+docker top:
+You can see the top processes within a container.
+Syntax
+$ docker top ContainerID 
+
+docker stop:
+This command is used to stop a running container.
+Syntax
+docker stop ContainerID
+
+docker rm:
+This command is used to delete a container.
+Syntax
+$ docker rm ContainerID
+
+docker stats:
+This command is used to provide the statistics of a running container.
+Syntax
+docker stats ContainerID
+
+docker attach:
+This command is used to attach to a running container.
+Syntax
+$ docker attach ContainerID 
+
+docker pause:
+This command is used to pause the processes in a running container.
+Syntax
+$ docker pause ContainerID
+
+docker unpause:
+This command is used to unpause the processes in a running container.
+Syntax
+$ docker unpause ContainerID
+
+docker kill
+This command is used to kill the processes in a running container.
+Syntax
+$ docker kill ContainerID
+
